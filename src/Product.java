@@ -1,3 +1,4 @@
+import java.text.DecimalFormat;
 public class Product {
     private String name;
     private double price;
@@ -11,7 +12,8 @@ public class Product {
         return name;
     }
 
-    public double getPrice(){
-        return price;
+    public String getPrice(){
+        DecimalFormat df = new DecimalFormat("#,##0.00");
+        return df.format(price);
     }
 }
